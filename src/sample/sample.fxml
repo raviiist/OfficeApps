@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPaneRootScene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="814.0" style="-fx-background-color: #BFC2D2;" stylesheets="@testStyle.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <bottom>
+      <AnchorPane prefHeight="85.0" prefWidth="791.0" style="-fx-background-color: #04212B;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="nextPass" layoutX="163.0" layoutY="25.0" prefHeight="38.0" prefWidth="588.0" textFill="#0fff53" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Line fx:id="testLinePath" endX="475.0" layoutX="260.0" layoutY="20.0" opacity="0.0" startX="-100.0" strokeWidth="5.0" />
+            <Line fx:id="flashLine" blendMode="EXCLUSION" cache="true" endX="28.0" layoutX="40.0" layoutY="23.0" startX="-6.0" strokeLineCap="ROUND" strokeWidth="4.0">
+               <stroke>
+                  <LinearGradient cycleMethod="REPEAT" endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="BLACK" offset="0.007662835249042145" />
+                        <Stop color="#dcf6fa1c" offset="0.007662835249042145" />
+                        <Stop color="#99daff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </Line>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#04212b" height="60.0" layoutX="752.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="62.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#04212b" height="59.0" layoutX="-1.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="168.0" />
+            <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="8.0" layoutY="26.0" prefHeight="38.0" prefWidth="157.0" text="Next PASS:" textFill="#84dd92">
+               <font>
+                  <Font name="Monospaced Bold" size="26.0" />
+               </font>
+            </Label>
+            <Separator layoutX="16.0" layoutY="14.0" prefHeight="2.0" prefWidth="777.0">
+               <effect>
+                  <DropShadow offsetX="2.0" offsetY="2.0" spread="0.53" />
+               </effect>
+            </Separator>
+            <ImageView fitHeight="59.0" fitWidth="57.0" layoutX="746.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-gps-antenna-96.png" />
+               </image>
+               <effect>
+                  <DropShadow offsetX="2.0" spread="0.61" />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="120.0" prefWidth="814.0" style="-fx-background-color: #04212B;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="TOP_LEFT" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="8.0" layoutY="14.0" text="PASS Schedule" textFill="#f5fffb" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Monospaced Regular" size="32.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="2.0" offsetY="2.0" spread="0.88" />
+               </effect>
+            </Label>
+            <Label fx:id="scid" graphicTextGap="10.0" layoutX="746.0" layoutY="10.0" text="C2C" textFill="#ff2929">
+               <font>
+                  <Font name="Agency FB Bold" size="36.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="2.0" offsetY="2.0" spread="0.75" />
+               </effect>
+            </Label>
+            <Label fx:id="testTimer" layoutX="449.0" layoutY="19.0" prefHeight="32.0" prefWidth="174.0" textFill="#f8e9e9">
+               <font>
+                  <Font name="Monospaced Regular" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="utLabel" layoutX="636.0" layoutY="16.0" text="UT" textFill="#fff8f8">
+               <font>
+                  <Font name="Monospaced Bold" size="28.0" />
+               </font>
+            </Label>
+            <Separator layoutX="18.0" layoutY="61.0" prefHeight="3.0" prefWidth="775.0">
+               <effect>
+                  <DropShadow offsetX="2.0" offsetY="2.0" spread="0.53" />
+               </effect>
+            </Separator>
+            <Separator layoutX="732.0" layoutY="9.0" orientation="VERTICAL" prefHeight="41.0" prefWidth="4.0">
+               <effect>
+                  <DropShadow offsetX="2.0" offsetY="2.0" spread="0.53" />
+               </effect>
+            </Separator>
+            <Label fx:id="currPassLabel" layoutX="6.0" layoutY="74.0" text="Curr.PASS:" textFill="#ff0b0b">
+               <font>
+                  <Font name="Monospaced Bold" size="26.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#000000b8" height="6.17" offsetX="2.0" offsetY="2.0" radius="3.3275" spread="0.14" width="9.14" />
+               </effect>
+            </Label>
+            <Label fx:id="currPass" layoutX="169.0" layoutY="73.0" prefHeight="36.0" prefWidth="624.0" textFill="#ff2929">
+               <font>
+                  <Font name="Gill Sans MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="45.0" fitWidth="51.0" layoutX="261.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-satellite-128.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="327.0" prefWidth="9.0" style="-fx-background-color: #04212B;" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <AnchorPane prefHeight="314.0" prefWidth="674.0" style="-fx-background-color: #04212B;" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="schArea" editable="false" layoutX="84.0" layoutY="62.0" prefHeight="121.0" prefWidth="509.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+            <ListView id="listID" fx:id="listOfPasses" editable="true" fixedCellSize="30.0" layoutX="10.0" layoutY="9.0" onMouseClicked="#selectedListIs" onMouseMoved="#listFocused" prefHeight="274.0" prefWidth="659.0" style="-fx-background-color: #9FB8DB; -fx-font-size: 17; -fx-font-weight: bold; -fx-border-color: #04212B;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></ListView>
+            <MediaView fx:id="media01" fitHeight="200.0" fitWidth="200.0" layoutX="306.0" layoutY="42.0" onMouseClicked="#playMedia01" />
+            
+                     </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="296.0" prefWidth="131.0" style="-fx-background-color: #04212B;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="showSch" layoutX="12.0" layoutY="14.0" mnemonicParsing="false" onAction="#ShowSchedule" prefHeight="39.0" prefWidth="108.0" text="Show SCH" textFill="#0462ae">
+               <font>
+                  <Font name="Gill Sans MT" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Circle fx:id="blinker1" fill="#26ff2d" layoutX="66.0" layoutY="252.0" radius="25.0" stroke="#b2a9a9" strokeType="INSIDE">
+               <effect>
+                  <DropShadow height="8.9" offsetX="1.0" offsetY="1.0" radius="3.95" width="8.9" />
+               </effect>
+            </Circle>
+            <Button fx:id="showSch1" layoutX="13.0" layoutY="66.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="108.0" text="Weekly SCH" textFill="#0462ae">
+               <font>
+                  <Font name="Gill Sans MT" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Unspecified Action0" />
+                        <MenuItem mnemonicParsing="false" text="Unspecified Action1" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </Button>
+            <ComboBox fx:id="sat_ids" layoutX="21.0" layoutY="129.0" onAction="#ShowSchedule" prefHeight="37.0" prefWidth="88.0" />
+         </children>
+      </AnchorPane>
+   </right>
+   <padding>
+      <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+   </padding>
+</BorderPane>
